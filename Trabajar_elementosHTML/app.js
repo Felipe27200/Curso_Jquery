@@ -44,4 +44,39 @@ $(document).ready(function () {
         1. El tipo de estilo 2. el valor de ese estilo.
     */
     $('#color-azul').css('color', 'blue');
+
+    /*
+        Segunda forma de definir estilos.
+
+        Se definen los estilos entre llaves, y se sigue la sintaxis de CSS
+    */
+    $('.colorPropio').css({color: '#D90368', background:'salmon', padding:'20px'});
+    
+    /*
+        Remover un elemento HTML
+    */
+    $('#eliminarElemento').remove();
+
+    /*
+        Esconder Elemento
+    */
+   $('#esconderElemento').hide();
+
+    /*
+        Definir el valor de un atributo.
+
+        El método attr() permite establecer un valor para el atributo,
+        el identificador del atributo se le pasa como primer argumento y
+        y el valor de este será el segundo argumento.
+    */
+    $('img').attr('src', 'https://api.jquery.com/jquery-wp-content/themes/jquery/content/books/learning-jquery-4th-ed.jpg');
+
+    /*
+        Modificar el atributo del último elemento img.
+
+        Si attr() no encuentra el atributo a modificar en el elemento, 
+        entonces, lo crea y le asigna el valor que haya en su segundo 
+        parámetro.
+    */
+    $('img:last').attr('width', '50px');
 });
